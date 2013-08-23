@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Objective-C | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/objective-c/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bermain Objective-C di Ubuntu]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/03/bermain-objective-c-di-ubuntu/"/>
+    <updated>2012-12-03T11:20:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/03/bermain-objective-c-di-ubuntu</id>
+    <content type="html"><![CDATA[<p>Objective-C adalah bahasa pemograman yang digunakan untuk membuat aplikasi di Mac.
+Alat yang biasa digunakan adalah Xcode. Sayangnya Xcode hanya tersedia di Mac.</p>
+
+<p>untuk bisa bermain Objective-C layaknya di Mac, diperlukan <a href="http://gnustep.org">GNUstep</a>.</p>
+
+<p>contoh kode dalam Objective-C adalah sebagai berikut
+``` objc</p>
+
+<h1>import &lt;Foundation/Foundation.h></h1>
+
+<p>int main(int argc, const char *argv[])
+{</p>
+
+<pre><code>NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
+NSLog(@"Programming is fun!");
+
+[pool drain];
+return 0;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>untuk mengubah kode tersebut menjadi sebuah executable file, ada tool yang perlu dinstall, yaitu libgnustep-base-dev.</p>
+
+<p>untuk menginstalnya,
+<code>bash
+sudo apt-get install libgnustep-base-dev
+</code>
+setelah menginstall tool tersebut, untuk menghasilkan executable file dapat menggunakan perintah compile berikut
+<code>bash
+gcc -I /usr/include/GNUstep -lgnustep-base -fconstant-string-class=NSConstantString -o hello hello.m
+</code>
+dengan asumsi bahwa kode tersebut ditulis pada file hello.m dan file executablenya diberi nama hello.</p>
+
+<p>kode diatas jika telah dijadikan executable, dapat di run sehingga menghasilkan output berikut
+<code>bash
+$ ./hello
+2012-09-08 11:04:48.092 hello[2467] Programming is fun!
+</code>
+Happy coding...</p>
+]]></content>
+  </entry>
+  
+</feed>

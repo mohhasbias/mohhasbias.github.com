@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: wordpress | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/wordpress/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[mengaktifkan template 404 pada wordpress]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/05/09/mengaktifkan-template-404-pada-wordpress/"/>
+    <updated>2013-05-09T11:37:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/05/09/mengaktifkan-template-404-pada-wordpress</id>
+    <content type="html"><![CDATA[<p>beberapa hari ini berkutat dengan pembuatan website berbasis wordpress.
+sangat menyenangkan karena wordpress merupakan framework berbasis template.
+yang artinya, kalau ingin membuat website, ganti saja template default dengan template yang diinginkan.</p>
+
+<p>salah satu contohnya adalah template untuk error 404. sebuah error yang salah satu kemunculannya karena user salah ketik URL.</p>
+
+<p>secara teori, 404 merupakan jalan buntu pada sebuah website. di halaman ini perlu diberikan saran untuk user tentang apa yang perlu dilakukan. ada banyak contoh kreatif yang bisa jadi <a href="http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/">sumber inspirasi</a>.</p>
+
+<p>di wordpress, template yang bertanggung jawab untuk 404 adalah file <code>404.php</code>.</p>
+
+<p>secara default, template ini tidak akan aktif kalau kita tidak membuat file htaccess untuk mengaktifkannya. apapun perubahan yang kita lakukan pada file <code>404.php</code> tidak akan ngefek. yang muncul hanyalah 404 default bawaan web server. misalnya seperti ini kalau kita pakai apache.
+<img src="images/apache_404_default.gif"></p>
+
+<p>untuk bisa mengaktifkan tanpa harus membuat file htaccess, cukup ganti menu permalinks pada wordpress. ganti dengan opsi manapun selain default. sebagai contoh
+<img src="images/permalink_options.png"></p>
+]]></content>
+  </entry>
+  
+</feed>

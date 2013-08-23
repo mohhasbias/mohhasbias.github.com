@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[update grub menggunakan liveCD]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/05/18/update-grub-menggunakan-livecd/"/>
+    <updated>2013-05-18T05:05:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/05/18/update-grub-menggunakan-livecd</id>
+    <content type="html"><![CDATA[<p>Baru saja kembali nguprek ubuntu setelah sekian lama ditinggal. Dan seperti biasa, saat main-main dual boot, bootloader-nya bermasalah.</p>
+
+<p>Iseng-iseng ganti konfigurasi grub jadinya malah ilang grub-nya. Setiap kali booting, langsung masuk ke windows.</p>
+
+<p>Alhamdulillah tidak terlalu panik, masih bisa tenang. Langsung kepikiran untuk pakai Live-CD</p>
+
+<p>Berikut adalah langkah-langkah menggunakan Live CD untuk meng-update grub</p>
+
+<ol>
+<li>Booting menggunakan Live CD, bisa pakai yang berbasis CD/DVD, bisa juga pakai USB. Saya pakai USB karena lappie-nya ga ada DVD drive-nya.</li>
+<li>Setelah masuk Live CD, buka terminal. Saya pakai Ubuntu Live CD, sehingga bisa pakai perintah <code>Ctrl + Alt + T</code> untuk membuka terminal.</li>
+<li>Mount partisi yang ingin di-update, contoh<br/>
+ <code>mount /dev/sda1 /mnt</code></li>
+<li>Mount file-file yang berhubungan dengan system/hardware menggunakan perintah berikut (sumber:<a href="http://ubuntuforums.org/showthread.php?t=2036730">ubuntuforum/update-grub</a>) <br/>
+ <code>for i in /dev /dev/pts /proc /sys /run; do sudo mount -B $i /mnt$i; done</code></li>
+<li>Aktifkan partisinya menggunakan chroot  <br/>
+ <code>sudo chroot /mnt</code></li>
+<li>Edit konfigurasi grub kemudian jalankan perintah update-grub<br/>
+ <code>update-grub</code></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

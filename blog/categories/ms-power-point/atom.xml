@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MS Power Point | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/ms-power-point/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[cycle through object in powerpoint]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/01/01/cycle-through-object-in-powerpoint/"/>
+    <updated>2013-01-01T19:45:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/01/01/cycle-through-object-in-powerpoint</id>
+    <content type="html"><![CDATA[<p><a href="http://www.ellenfinkelstein.com/pptblog/cycle-through-overlapping-objects-to-select-them/">Cycle through objects</a></p>
+]]></content>
+  </entry>
+  
+</feed>

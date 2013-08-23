@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Windows Administration | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/windows-administration/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Unhide Account Administrator di Windows 7]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/03/unhide-account-administrator-di-windows-7/"/>
+    <updated>2012-12-03T10:57:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/03/unhide-account-administrator-di-windows-7</id>
+    <content type="html"><![CDATA[<p>enable admin account by using this command:
+<code>
+net user administrator /active:yes
+</code></p>
+
+<p>to disable, use this command:
+<code>
+net user administrator /active:no
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

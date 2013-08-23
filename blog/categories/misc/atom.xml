@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Misc | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/misc/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[list open port on mac osx]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/18/list-open-port-on-mac-osx/"/>
+    <updated>2012-12-18T12:39:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/18/list-open-port-on-mac-osx</id>
+    <content type="html"><![CDATA[<p>untuk melihat current user opened port:
+<code>bash
+lsof -i -P | grep -i "listen"
+</code></p>
+
+<p>untuk melihat keseluruhan system:
+<code>bash
+sudo lsof -i -P | grep -i "listen"
+</code></p>
+
+<p><a href="http://od-eon.com/blogs/calvin/list-open-ports-mac-os-x/">referensi</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Markdown list not working when using Backtick in Octopress]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/12/markdown-list-not-working-when-using-backtick-in-octopress/"/>
+    <updated>2012-12-12T05:32:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/12/markdown-list-not-working-when-using-backtick-in-octopress</id>
+    <content type="html"><![CDATA[<p>Beberapa hari ini, mulai migrasi dari wordpress ke octopress.<br/>
+First impressionnya mantab.</p>
+
+<p>Hanya saja, seperti biasa, selalu ada masalah</p>
+
+<p>Yang menarik, pembuatannya postnya tidak menggunakan HTML melainkan Markdown
+konsepnya, sebuah tool yang mengubah plain text menjadi HTML.</p>
+
+<p>Salah satu yang saya pakai adalah ordered list.<br/>
+Caranya <a href="http://daringfireball.net/projects/markdown/syntax#list">seperti berikut</a>.<br/>
+Pada file markdown, cukup ditulis sebagai berikut
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. Bird
+</span><span class='line'>2. McHale
+</span><span class='line'>3. Parish</span></code></pre></td></tr></table></div></figure></notextile></div>
+Maka oleh Markdown akan di convert menjadi
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;ol&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;</span>Bird<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;</span>McHale<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;</span>Parish<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ol&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Sederhana.</p>
+
+<p>Disisi lain, octopress menyediakan tool untuk highlight code.
+Toolnya ada dua, yaitu <a href="http://octopress.org/docs/plugins/backtick-codeblock/">backtick</a> dan <a href="http://octopress.org/docs/plugins/codeblock/">codeblock</a>.<br/>
+Yang menjadi masalah, saat markdown list digunakan bersamaan dengan backtick. Efeknya, markdown list-nya ga jalan.<br/>
+Solusinya, penggunaan backtick diganti dengan codeblock.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[belajar]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/12/belajar/"/>
+    <updated>2012-12-12T04:53:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/12/belajar</id>
+    <content type="html"><![CDATA[<p>belajar itu sulit, jika terburu-buru.</p>
+
+<p>you just can't force the knowledge to enter yourself. <br/>
+you can only try and try and try again. <br/>
+sabar.</p>
+
+<p>di saat seperti ini, benarlah bahwa Allah yang menentukan siapa yang mendapat petunjuk.</p>
+
+<p>Bismillah. semoga Allah selalu memberi kemudahan dan memberi kemampuan untuk bersabar.<br/>
+amin...</p>
+
+<blockquote><p>Robbi zidni ilma, warzuqni fahma.<br/>
+Ya Allah, tambahkanlah ilmuku, dan berilah aku kepahaman</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Bootcamp for Windows 7 64bit on iMac Early 2007]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/03/install-bootcamp-for-windows-7-64bit-on-imac-early-2007/"/>
+    <updated>2012-12-03T10:53:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/03/install-bootcamp-for-windows-7-64bit-on-imac-early-2007</id>
+    <content type="html"><![CDATA[<p>buka isi dvd bawaan iMac.
+buka folder "Boot Camp/Drivers/Apple"
+di folder tersebut terdapat driver bootcamp untuk 64bit dengan nama "BootCamp64.msi"</p>
+
+<p>referensi:
+<a href="http://ashleyangell.com/2009/10/how-to-install-bootcamp-3-0-on-windows-7-x64-on-a-2008-macbook/">how to install bootcamp 3.0 on windows 7 x64 on a 2008 macbook</a></p>
+]]></content>
+  </entry>
+  
+</feed>

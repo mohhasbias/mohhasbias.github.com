@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ubuntu | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to create a bootable USB stick on OS X]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/01/03/how-to-create-a-bootable-usb-stick-on-os-x/"/>
+    <updated>2013-01-03T13:13:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/01/03/how-to-create-a-bootable-usb-stick-on-os-x</id>
+    <content type="html"><![CDATA[<p><a href="http://www.ubuntu.com/download/help/create-a-usb-stick-on-mac-osx">Create bootable USB on OS X</a></p>
+]]></content>
+  </entry>
+  
+</feed>

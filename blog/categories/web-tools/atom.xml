@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Web Tools | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/web-tools/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Open iframe on new tab in google chrome]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/03/open-iframe-on-new-tab-in-google-chrome/"/>
+    <updated>2012-12-03T10:43:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/03/open-iframe-on-new-tab-in-google-chrome</id>
+    <content type="html"><![CDATA[<p>use <a href="https://chrome.google.com/webstore/detail/open-frame-in-new-tab/jjjodgdplcalapdbmmgadocimcahehjf/related">this extension</a> from google web store</p>
+]]></content>
+  </entry>
+  
+</feed>

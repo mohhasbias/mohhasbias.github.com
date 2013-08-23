@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Membuat kapitalisasi otomatis menggunakan CSS]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/05/18/membuat-kapitalisasi-otomatis-menggunakan-css/"/>
+    <updated>2013-05-18T21:33:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/05/18/membuat-kapitalisasi-otomatis-menggunakan-css</id>
+    <content type="html"><![CDATA[<p>pada CSS terdapat properti untuk membuat text otomatis menjadi Title Case, yaitu membuat awal huruf pada setiap kata menjadi huruf besar.
+akan tetapi, properti tersebut tidak mengubah huruf lain menjadi kecil. Karenanya, perlu dikombinasi dengan perintah lain.</p>
+
+<p>Sebagai contoh, jika menggunakan PHP, maka sebelum sebuah string ditampilkan, harus dikecilkan dulu menggunakan <code>strtolower</code>. kemudian pada CSS-nya, kita aktifkan properti <code>text-transform</code>, seperti berikut ini</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">p</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">text-transform</span><span class="o">:</span> <span class="k">capitalize</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[update grub menggunakan liveCD]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/05/18/update-grub-menggunakan-livecd/"/>
+    <updated>2013-05-18T05:05:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/05/18/update-grub-menggunakan-livecd</id>
+    <content type="html"><![CDATA[<p>Baru saja kembali nguprek ubuntu setelah sekian lama ditinggal. Dan seperti biasa, saat main-main dual boot, bootloader-nya bermasalah.</p>
+
+<p>Iseng-iseng ganti konfigurasi grub jadinya malah ilang grub-nya. Setiap kali booting, langsung masuk ke windows.</p>
+
+<p>Alhamdulillah tidak terlalu panik, masih bisa tenang. Langsung kepikiran untuk pakai Live-CD</p>
+
+<p>Berikut adalah langkah-langkah menggunakan Live CD untuk meng-update grub</p>
+
+<ol>
+<li>Booting menggunakan Live CD, bisa pakai yang berbasis CD/DVD, bisa juga pakai USB. Saya pakai USB karena lappie-nya ga ada DVD drive-nya.</li>
+<li>Setelah masuk Live CD, buka terminal. Saya pakai Ubuntu Live CD, sehingga bisa pakai perintah <code>Ctrl + Alt + T</code> untuk membuka terminal.</li>
+<li>Mount partisi yang ingin di-update, contoh<br/>
+ <code>mount /dev/sda1 /mnt</code></li>
+<li>Mount file-file yang berhubungan dengan system/hardware menggunakan perintah berikut (sumber:<a href="http://ubuntuforums.org/showthread.php?t=2036730">ubuntuforum/update-grub</a>) <br/>
+ <code>for i in /dev /dev/pts /proc /sys /run; do sudo mount -B $i /mnt$i; done</code></li>
+<li>Aktifkan partisinya menggunakan chroot  <br/>
+ <code>sudo chroot /mnt</code></li>
+<li>Edit konfigurasi grub kemudian jalankan perintah update-grub<br/>
+ <code>update-grub</code></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[cara memperbaiki windows 7 (BOOTMGR is MISSING)]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/05/17/cara-memperbaiki-windows-7-bootmgr-is-missing/"/>
+    <updated>2013-05-17T20:45:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/05/17/cara-memperbaiki-windows-7-bootmgr-is-missing</id>
+    <content type="html"><![CDATA[<p>Jika anda mencoba linux semisal ubuntu, seringkali anda menginstall-nya di partisi lain yang biasa disebut dengan <a href="http://en.wikipedia.org/wiki/Multi_boot">dual boot</a>. Dalam dunia dual boot, kemungkinan besar anda akan tersandung ke masalah boot manager.</p>
+
+<p>salah satu contoh masalahnya seperti ini, ketika komputer dihidupkan dan hendak booting ke windows 7, muncul tampilan berikut</p>
+
+<p><img src="http://mohhasbias.github.com/images/bootmgr_error.png"></p>
+
+<p>cara membetulkannya sebagai berikut:</p>
+
+<ol>
+<li>booting menggunakan installer windows</li>
+<li>kemudian pilih menu &#8220;Repair your computer&#8221;</li>
+<li>kemudian pilih menu &#8220;Use recovery tools that &#8230; (bla bla bla)&#8221;. klik Next</li>
+<li><p>Pada tampilan ini, pilih menu &#8220;Startup Repair&#8221;</p>
+
+<p> <img src="http://mohhasbias.github.com/images/system_recovery_tools.png"></p></li>
+<li><p>Tunggu prosesnya berjalan</p>
+
+<p> <img src="http://mohhasbias.github.com/images/startup_repair.png"></p></li>
+<li><p>Jika proses berhasil, tekan Finish untuk merestart komputer.</p></li>
+<li>Jika berhasil maka setelah restart anda akan mendapatkan kembali windows anda. Tanpa harus install ulang.</li>
+</ol>
+
+
+<p>sumber: <a href="http://www.sevenforums.com/tutorials/104341-bootmgr-missing-fix.html">How to fix the &#8220;Bootmgr is missing&#8221;</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[mengaktifkan template 404 pada wordpress]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/05/09/mengaktifkan-template-404-pada-wordpress/"/>
+    <updated>2013-05-09T11:37:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/05/09/mengaktifkan-template-404-pada-wordpress</id>
+    <content type="html"><![CDATA[<p>beberapa hari ini berkutat dengan pembuatan website berbasis wordpress.
+sangat menyenangkan karena wordpress merupakan framework berbasis template.
+yang artinya, kalau ingin membuat website, ganti saja template default dengan template yang diinginkan.</p>
+
+<p>salah satu contohnya adalah template untuk error 404. sebuah error yang salah satu kemunculannya karena user salah ketik URL.</p>
+
+<p>secara teori, 404 merupakan jalan buntu pada sebuah website. di halaman ini perlu diberikan saran untuk user tentang apa yang perlu dilakukan. ada banyak contoh kreatif yang bisa jadi <a href="http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/">sumber inspirasi</a>.</p>
+
+<p>di wordpress, template yang bertanggung jawab untuk 404 adalah file <code>404.php</code>.</p>
+
+<p>secara default, template ini tidak akan aktif kalau kita tidak membuat file htaccess untuk mengaktifkannya. apapun perubahan yang kita lakukan pada file <code>404.php</code> tidak akan ngefek. yang muncul hanyalah 404 default bawaan web server. misalnya seperti ini kalau kita pakai apache.
+<img src="images/apache_404_default.gif"></p>
+
+<p>untuk bisa mengaktifkan tanpa harus membuat file htaccess, cukup ganti menu permalinks pada wordpress. ganti dengan opsi manapun selain default. sebagai contoh
+<img src="images/permalink_options.png"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[install ruby on Mac OS X Leopard]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/01/07/install-ruby-on-mac-os-x-leopard/"/>
+    <updated>2013-01-07T13:46:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/01/07/install-ruby-on-mac-os-x-leopard</id>
+    <content type="html"><![CDATA[<ol>
+<li>install brew
+
+<ul>
+<li><a href="http://mxcl.github.com/homebrew/">install brew</a></li>
+<li>install git using brew</li>
+</ul>
+</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install git</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>install rvm
+
+<ul>
+<li><a href="https://rvm.io/">install rvm and ruby</a></li>
+</ul>
+</li>
+<li>install ruby and manage gemset using rvm
+
+<ul>
+<li>install ruby using rvm</li>
+</ul>
+</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm install ruby 1.9.3</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>- getting list of supported rubies
+</code></pre>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm list known</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>- use installed rubies
+</code></pre>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm use ruby1.9.3</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>- create gemset
+</code></pre>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm gemset create gemset-name</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>- use gemset
+</code></pre>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm gemset use gemset-name</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>- shorthand
+</code></pre>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm use ruby@gemset</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[reinstall Gemfile]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/01/06/reinstall-gemfile/"/>
+    <updated>2013-01-06T08:40:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/01/06/reinstall-gemfile</id>
+    <content type="html"><![CDATA[<p>to reinstall Gemfile
+1. remove current gem</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem uninstall gem-name</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>reinstall using bundler</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to create a bootable USB stick on OS X]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/01/03/how-to-create-a-bootable-usb-stick-on-os-x/"/>
+    <updated>2013-01-03T13:13:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/01/03/how-to-create-a-bootable-usb-stick-on-os-x</id>
+    <content type="html"><![CDATA[<p><a href="http://www.ubuntu.com/download/help/create-a-usb-stick-on-mac-osx">Create bootable USB on OS X</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[cycle through object in powerpoint]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/01/01/cycle-through-object-in-powerpoint/"/>
+    <updated>2013-01-01T19:45:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/01/01/cycle-through-object-in-powerpoint</id>
+    <content type="html"><![CDATA[<p><a href="http://www.ellenfinkelstein.com/pptblog/cycle-through-overlapping-objects-to-select-them/">Cycle through objects</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Understanding Rails Scaffolding]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/31/understanding-rails-scaffolding/"/>
+    <updated>2012-12-31T09:16:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/31/understanding-rails-scaffolding</id>
+    <content type="html"><![CDATA[<p><a href="http://viget.com/extend/rails-3-generators-scaffolding">Rails Scaffolding</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Custom field error in Rails]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/31/custom-field-error-in-rails/"/>
+    <updated>2012-12-31T02:06:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/31/custom-field-error-in-rails</id>
+    <content type="html"><![CDATA[<p><a href="http://stackoverflow.com/questions/5267998/rails-3-field-with-errors-wrapper-changes-the-page-appearance-how-to-avoid-t">&#8220;field-with-errors&#8221; wrapper problem</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[free web textures]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/31/free-web-textures/"/>
+    <updated>2012-12-31T00:24:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/31/free-web-textures</id>
+    <content type="html"><![CDATA[<p><a href="http://subtlepatterns.com/">subtle patterns</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[using jQuery in CoffeeScript]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/31/using-jquery-in-coffeescript/"/>
+    <updated>2012-12-31T00:11:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/31/using-jquery-in-coffeescript</id>
+    <content type="html"><![CDATA[<p><a href="http://aaronrussell.co.uk/articles/using-coffeescript-with-jquery/">Using jQuery with CoffeeScript</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Common Git Command]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/29/common-git-command/"/>
+    <updated>2012-12-29T05:49:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/29/common-git-command</id>
+    <content type="html"><![CDATA[<p>Undoing commit in some scenarios</p>
+
+<ol>
+<li>Forgot adding files</li>
+</ol>
+
+
+<!-- -->
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git commit --amend</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Reset the repository to the last commited state (remove any current changes)</li>
+</ol>
+
+
+<!-- -->
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># clean stage index
+</span><span class='line'>      git reset --hard
+</span><span class='line'>      # clean unstage files
+</span><span class='line'>      git clean -d -f # use -n to dry-run</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>unstage</li>
+</ol>
+
+
+<!-- -->
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git reset HEAD</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[set proxy for apt]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/27/set-proxy-for-apt/"/>
+    <updated>2012-12-27T15:43:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/27/set-proxy-for-apt</id>
+    <content type="html"><![CDATA[<p><a href="http://askubuntu.com/questions/89437/how-to-install-packages-with-apt-get-on-a-system-connected-via-proxy">set proxy for apt</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[install virtualbox guest on vagrant lucid32 box]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/26/install-virtualbox-guest-on-vagrant-lucid32-box/"/>
+    <updated>2012-12-26T17:06:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/26/install-virtualbox-guest-on-vagrant-lucid32-box</id>
+    <content type="html"><![CDATA[<p><a href="http://software.darrenthetiger.com/2012/01/installing-virtualbox-guest-additions-on-a-vagrant-lucid64-box/">install guest on lucid64</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[css selector]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/25/css-selector/"/>
+    <updated>2012-12-25T19:22:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/25/css-selector</id>
+    <content type="html"><![CDATA[<p><a href="http://css.kentucka.com/?element">list of useful selector</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[run vagrant on boot in OS X]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/18/run-vagrant-on-boot-in-os-x/"/>
+    <updated>2012-12-18T12:43:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/18/run-vagrant-on-boot-in-os-x</id>
+    <content type="html"><![CDATA[<p><a href="http://mikkel.hoegh.org/blog/2010/12/23/run-virtualbox-boot-mac-os-x/">referensi virtualbox</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[list open port on mac osx]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/18/list-open-port-on-mac-osx/"/>
+    <updated>2012-12-18T12:39:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/18/list-open-port-on-mac-osx</id>
+    <content type="html"><![CDATA[<p>untuk melihat current user opened port:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>lsof -i -P | grep -i <span class="s2">&quot;listen&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>untuk melihat keseluruhan system:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo lsof -i -P | grep -i <span class="s2">&quot;listen&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://od-eon.com/blogs/calvin/list-open-ports-mac-os-x/">referensi</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Markdown list not working when using Backtick in Octopress]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/12/markdown-list-not-working-when-using-backtick-in-octopress/"/>
+    <updated>2012-12-12T05:32:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/12/markdown-list-not-working-when-using-backtick-in-octopress</id>
+    <content type="html"><![CDATA[<p>Beberapa hari ini, mulai migrasi dari wordpress ke octopress.<br/>
+First impressionnya mantab.</p>
+
+<p>Hanya saja, seperti biasa, selalu ada masalah</p>
+
+<p>Yang menarik, pembuatannya postnya tidak menggunakan HTML melainkan Markdown
+konsepnya, sebuah tool yang mengubah plain text menjadi HTML.</p>
+
+<p>Salah satu yang saya pakai adalah ordered list.<br/>
+Caranya <a href="http://daringfireball.net/projects/markdown/syntax#list">seperti berikut</a>.<br/>
+Pada file markdown, cukup ditulis sebagai berikut</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. Bird
+</span><span class='line'>2. McHale
+</span><span class='line'>3. Parish</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Maka oleh Markdown akan di convert menjadi</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ol&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;</span>Bird<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;</span>McHale<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;</span>Parish<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ol&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sederhana.</p>
+
+<p>Disisi lain, octopress menyediakan tool untuk highlight code.
+Toolnya ada dua, yaitu <a href="http://octopress.org/docs/plugins/backtick-codeblock/">backtick</a> dan <a href="http://octopress.org/docs/plugins/codeblock/">codeblock</a>.<br/>
+Yang menjadi masalah, saat markdown list digunakan bersamaan dengan backtick. Efeknya, markdown list-nya ga jalan.<br/>
+Solusinya, penggunaan backtick diganti dengan codeblock.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[belajar]]></title>
+    <link href="http://mohhasbias.github.com/blog/2012/12/12/belajar/"/>
+    <updated>2012-12-12T04:53:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2012/12/12/belajar</id>
+    <content type="html"><![CDATA[<p>belajar itu sulit, jika terburu-buru.</p>
+
+<p>you just can&#8217;t force the knowledge to enter yourself. <br/>
+you can only try and try and try again. <br/>
+sabar.</p>
+
+<p>di saat seperti ini, benarlah bahwa Allah yang menentukan siapa yang mendapat petunjuk.</p>
+
+<p>Bismillah. semoga Allah selalu memberi kemudahan dan memberi kemampuan untuk bersabar.<br/>
+amin&#8230;</p>
+
+<blockquote><p>Robbi zidni ilma, warzuqni fahma.<br/>
+Ya Allah, tambahkanlah ilmuku, dan berilah aku kepahaman</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

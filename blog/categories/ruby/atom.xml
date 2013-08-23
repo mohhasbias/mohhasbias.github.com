@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[install ruby on Mac OS X Leopard]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/01/07/install-ruby-on-mac-os-x-leopard/"/>
+    <updated>2013-01-07T13:46:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/01/07/install-ruby-on-mac-os-x-leopard</id>
+    <content type="html"><![CDATA[<ol>
+<li>install brew
+
+<ul>
+<li><a href="http://mxcl.github.com/homebrew/">install brew</a></li>
+<li>install git using brew
+<code>
+brew install git
+</code></li>
+</ul>
+</li>
+<li>install rvm
+
+<ul>
+<li><a href="https://rvm.io/">install rvm and ruby</a></li>
+</ul>
+</li>
+<li>install ruby and manage gemset using rvm
+
+<ul>
+<li>install ruby using rvm
+<code>
+rvm install ruby 1.9.3
+</code></li>
+<li>getting list of supported rubies
+<code>
+rvm list known
+</code></li>
+<li>use installed rubies
+<code>
+rvm use ruby1.9.3
+</code></li>
+<li>create gemset
+<code>
+rvm gemset create gemset-name
+</code></li>
+<li>use gemset
+<code>
+rvm gemset use gemset-name
+</code></li>
+<li>shorthand
+<code>
+rvm use ruby@gemset
+</code></li>
+</ul>
+</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

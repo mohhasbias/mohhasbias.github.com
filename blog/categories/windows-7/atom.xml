@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Windows 7 | Mengabdi melalui Programming]]></title>
+  <link href="http://mohhasbias.github.com/blog/categories/windows-7/atom.xml" rel="self"/>
+  <link href="http://mohhasbias.github.com/"/>
+  <updated>2013-08-23T22:56:20+07:00</updated>
+  <id>http://mohhasbias.github.com/</id>
+  <author>
+    <name><![CDATA[Moh Hasbi Assidiqi]]></name>
+    <email><![CDATA[mohhasbias@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[cara memperbaiki windows 7 (BOOTMGR is MISSING)]]></title>
+    <link href="http://mohhasbias.github.com/blog/2013/05/17/cara-memperbaiki-windows-7-bootmgr-is-missing/"/>
+    <updated>2013-05-17T20:45:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2013/05/17/cara-memperbaiki-windows-7-bootmgr-is-missing</id>
+    <content type="html"><![CDATA[<p>Jika anda mencoba linux semisal ubuntu, seringkali anda menginstall-nya di partisi lain yang biasa disebut dengan <a href="http://en.wikipedia.org/wiki/Multi_boot">dual boot</a>. Dalam dunia dual boot, kemungkinan besar anda akan tersandung ke masalah boot manager.</p>
+
+<p>salah satu contoh masalahnya seperti ini, ketika komputer dihidupkan dan hendak booting ke windows 7, muncul tampilan berikut</p>
+
+<p><img src="/images/bootmgr_error.png"></p>
+
+<p>cara membetulkannya sebagai berikut:</p>
+
+<ol>
+<li>booting menggunakan installer windows</li>
+<li>kemudian pilih menu "Repair your computer"</li>
+<li>kemudian pilih menu "Use recovery tools that ... (bla bla bla)". klik Next</li>
+<li><p>Pada tampilan ini, pilih menu "Startup Repair"</p>
+
+<p> <img src="/images/system_recovery_tools.png"></p></li>
+<li><p>Tunggu prosesnya berjalan</p>
+
+<p> <img src="/images/startup_repair.png"></p></li>
+<li><p>Jika proses berhasil, tekan Finish untuk merestart komputer.</p></li>
+<li>Jika berhasil maka setelah restart anda akan mendapatkan kembali windows anda. Tanpa harus install ulang.</li>
+</ol>
+
+
+<p>sumber: <a href="http://www.sevenforums.com/tutorials/104341-bootmgr-missing-fix.html">How to fix the "Bootmgr is missing"</a></p>
+]]></content>
+  </entry>
+  
+</feed>
