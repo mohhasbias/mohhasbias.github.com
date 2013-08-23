@@ -3,8 +3,8 @@
 # ----------------------- #
 
 url: http://mohhasbias.github.com
-title: Programming, Programming, and Programming 
-subtitle: Rails, Objective-C, Blender, and Misc ... 
+title: Mengabdi melalui Programming
+subtitle: PHP, HTML, Javascript, JQuery, Ruby, Rails, Obj-C, Blender 3D
 author: Moh Hasbi Assidiqi
 simple_search: http://google.com/search
 description:
@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: mohhasbias@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -64,12 +64,12 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user: m_hasbi_as
-twitter_tweet_count: 4
-twitter_show_replies: false
-twitter_follow_button: true
-twitter_show_follower_count: false
-twitter_tweet_button: true
+#twitter_user: m_hasbi_as
+#twitter_tweet_count: 4
+#twitter_show_replies: false
+#twitter_follow_button: true
+#twitter_show_follower_count: false
+#twitter_tweet_button: true
 
 # Google +1
 google_plus_one: false
