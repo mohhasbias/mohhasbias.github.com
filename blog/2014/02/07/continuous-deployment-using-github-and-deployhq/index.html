@@ -5,11 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Category: Ubuntu - Mengabdi melalui Programming</title>
+	<title>Continuous Deployment using Github and DeployHQ - Mengabdi melalui Programming</title>
 	<meta name="author" content="Moh Hasbi Assidiqi">
 
 	
-	<meta name="description" content="Category: Ubuntu">
+	<meta name="description" content="Continuous Deployment Using Github and DeployHQ Berikut adalah langkah-langkah untuk menerapkan continuous deployment (automatic deployment) &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="Mengabdi melalui Programming" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://mohhasbias.github.comblog/categories/ubuntu/">
+	<link rel="canonical" href="http://mohhasbias.github.com/blog/2014/02/07/continuous-deployment-using-github-and-deployhq/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -83,30 +83,45 @@
 				
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner">
-	
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Continuous Deployment Using Github and DeployHQ</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Berikut adalah langkah-langkah untuk menerapkan continuous deployment (automatic deployment) menggunakan Github dan DeployHQ</p>
 
+<ol>
+<li>Siapkan repo yang ingin dideploy pada Github</li>
+<li>Tambahkan project baru pada deployHQ dengan memilih repo bertipe github</li>
+<li>Setelah login berhasil, pilih repo yang diinginkan dari daftar repo yang ada</li>
+<li>Gunakan menu deploy now untuk menguji kerja deployHQ</li>
+<li>Jika berhasil, aktifkan auto deploy dengan meng-copy github hook dari server setting</li>
+<li>Pada repo di Github, aktifkan service hooks untuk deployHQ dengan meng-paste github hook sebelumnya</li>
+<li>Enjoy</li>
+</ol>
 
-	
-	
-	<section class="archives"><h1 class="year">2013</h1>
+</div>
 
-<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<span class="date"><time datetime="2013-01-03T13:13:00+07:00" itemprop="datePublished">Jan  3</time></span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/ubuntu/'>Ubuntu</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/01/03/how-to-create-a-bootable-usb-stick-on-os-x/">How to create a bootable USB stick on OS X</a></h1>
 </article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
 </div>
 			</div>
 			<footer id="footer" class="inner"><p>
@@ -121,7 +136,10 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       var disqus_shortname = 'allaboutprogramming';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mohhasbias.github.com/blog/2014/02/07/continuous-deployment-using-github-and-deployhq/';
+        var disqus_url = 'http://mohhasbias.github.com/blog/2014/02/07/continuous-deployment-using-github-and-deployhq/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

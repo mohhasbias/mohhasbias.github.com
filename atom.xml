@@ -4,7 +4,7 @@
   <title><![CDATA[Mengabdi melalui Programming]]></title>
   <link href="http://mohhasbias.github.com/atom.xml" rel="self"/>
   <link href="http://mohhasbias.github.com/"/>
-  <updated>2013-08-23T23:04:08+07:00</updated>
+  <updated>2014-02-07T19:34:04+07:00</updated>
   <id>http://mohhasbias.github.com/</id>
   <author>
     <name><![CDATA[Moh Hasbi Assidiqi]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Deployment using Github and DeployHQ]]></title>
+    <link href="http://mohhasbias.github.com/blog/2014/02/07/continuous-deployment-using-github-and-deployhq/"/>
+    <updated>2014-02-07T09:07:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2014/02/07/continuous-deployment-using-github-and-deployhq</id>
+    <content type="html"><![CDATA[<p>Berikut adalah langkah-langkah untuk menerapkan continuous deployment (automatic deployment) menggunakan Github dan DeployHQ</p>
+
+<ol>
+<li>Siapkan repo yang ingin dideploy pada Github</li>
+<li>Tambahkan project baru pada deployHQ dengan memilih repo bertipe github</li>
+<li>Setelah login berhasil, pilih repo yang diinginkan dari daftar repo yang ada</li>
+<li>Gunakan menu deploy now untuk menguji kerja deployHQ</li>
+<li>Jika berhasil, aktifkan auto deploy dengan meng-copy github hook dari server setting</li>
+<li>Pada repo di Github, aktifkan service hooks untuk deployHQ dengan meng-paste github hook sebelumnya</li>
+<li>Enjoy</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Membuat kapitalisasi otomatis menggunakan CSS]]></title>
@@ -438,27 +458,6 @@ Pada file markdown, cukup ditulis sebagai berikut</p>
 Toolnya ada dua, yaitu <a href="http://octopress.org/docs/plugins/backtick-codeblock/">backtick</a> dan <a href="http://octopress.org/docs/plugins/codeblock/">codeblock</a>.<br/>
 Yang menjadi masalah, saat markdown list digunakan bersamaan dengan backtick. Efeknya, markdown list-nya ga jalan.<br/>
 Solusinya, penggunaan backtick diganti dengan codeblock.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[belajar]]></title>
-    <link href="http://mohhasbias.github.com/blog/2012/12/12/belajar/"/>
-    <updated>2012-12-12T04:53:00+07:00</updated>
-    <id>http://mohhasbias.github.com/blog/2012/12/12/belajar</id>
-    <content type="html"><![CDATA[<p>belajar itu sulit, jika terburu-buru.</p>
-
-<p>you just can&#8217;t force the knowledge to enter yourself. <br/>
-you can only try and try and try again. <br/>
-sabar.</p>
-
-<p>di saat seperti ini, benarlah bahwa Allah yang menentukan siapa yang mendapat petunjuk.</p>
-
-<p>Bismillah. semoga Allah selalu memberi kemudahan dan memberi kemampuan untuk bersabar.<br/>
-amin&#8230;</p>
-
-<blockquote><p>Robbi zidni ilma, warzuqni fahma.<br/>
-Ya Allah, tambahkanlah ilmuku, dan berilah aku kepahaman</p></blockquote>
 ]]></content>
   </entry>
   
