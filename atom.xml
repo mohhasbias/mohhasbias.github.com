@@ -4,7 +4,7 @@
   <title><![CDATA[Mengabdi melalui Programming]]></title>
   <link href="http://mohhasbias.github.com/atom.xml" rel="self"/>
   <link href="http://mohhasbias.github.com/"/>
-  <updated>2014-02-07T19:34:04+07:00</updated>
+  <updated>2014-02-09T14:00:29+07:00</updated>
   <id>http://mohhasbias.github.com/</id>
   <author>
     <name><![CDATA[Moh Hasbi Assidiqi]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Membuat tombol instagram follow]]></title>
+    <link href="http://mohhasbias.github.com/blog/2014/02/09/membuat-tombol-instagram-follow/"/>
+    <updated>2014-02-09T13:56:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2014/02/09/membuat-tombol-instagram-follow</id>
+    <content type="html"><![CDATA[<p>ada beberapa situs yang menyediakan fitur instagram follow, diantaranya:</p>
+
+<ol>
+<li><a href="http://instafollowbutton.com/">Instagram Follow Button</a></li>
+<li><a href="https://www.addthis.com/get/smart-layers?frm=hp">AddThis</a></li>
+</ol>
+
+
+<p>keduanya memiliki cara pengaktifan yang berbeda.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Restore previous version of file in Git]]></title>
+    <link href="http://mohhasbias.github.com/blog/2014/02/08/restore-previous-version-of-file-in-git/"/>
+    <updated>2014-02-08T20:32:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2014/02/08/restore-previous-version-of-file-in-git</id>
+    <content type="html"><![CDATA[<p>Untuk me-restore versi sebelumnya dari sebuah file di git, dapat menggunakan perintah berikut</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout sha1number file/to/restore
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Continuous Deployment using Github and DeployHQ]]></title>
@@ -386,78 +419,6 @@ yang artinya, kalau ingin membuat website, ganti saja template default dengan te
     <updated>2012-12-18T12:43:00+07:00</updated>
     <id>http://mohhasbias.github.com/blog/2012/12/18/run-vagrant-on-boot-in-os-x</id>
     <content type="html"><![CDATA[<p><a href="http://mikkel.hoegh.org/blog/2010/12/23/run-virtualbox-boot-mac-os-x/">referensi virtualbox</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[list open port on mac osx]]></title>
-    <link href="http://mohhasbias.github.com/blog/2012/12/18/list-open-port-on-mac-osx/"/>
-    <updated>2012-12-18T12:39:00+07:00</updated>
-    <id>http://mohhasbias.github.com/blog/2012/12/18/list-open-port-on-mac-osx</id>
-    <content type="html"><![CDATA[<p>untuk melihat current user opened port:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>lsof -i -P | grep -i <span class="s2">&quot;listen&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>untuk melihat keseluruhan system:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo lsof -i -P | grep -i <span class="s2">&quot;listen&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://od-eon.com/blogs/calvin/list-open-ports-mac-os-x/">referensi</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Markdown list not working when using Backtick in Octopress]]></title>
-    <link href="http://mohhasbias.github.com/blog/2012/12/12/markdown-list-not-working-when-using-backtick-in-octopress/"/>
-    <updated>2012-12-12T05:32:00+07:00</updated>
-    <id>http://mohhasbias.github.com/blog/2012/12/12/markdown-list-not-working-when-using-backtick-in-octopress</id>
-    <content type="html"><![CDATA[<p>Beberapa hari ini, mulai migrasi dari wordpress ke octopress.<br/>
-First impressionnya mantab.</p>
-
-<p>Hanya saja, seperti biasa, selalu ada masalah</p>
-
-<p>Yang menarik, pembuatannya postnya tidak menggunakan HTML melainkan Markdown
-konsepnya, sebuah tool yang mengubah plain text menjadi HTML.</p>
-
-<p>Salah satu yang saya pakai adalah ordered list.<br/>
-Caranya <a href="http://daringfireball.net/projects/markdown/syntax#list">seperti berikut</a>.<br/>
-Pada file markdown, cukup ditulis sebagai berikut</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>1. Bird
-</span><span class='line'>2. McHale
-</span><span class='line'>3. Parish</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Maka oleh Markdown akan di convert menjadi</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ol&gt;</span>
-</span><span class='line'><span class="nt">&lt;li&gt;</span>Bird<span class="nt">&lt;/li&gt;</span>
-</span><span class='line'><span class="nt">&lt;li&gt;</span>McHale<span class="nt">&lt;/li&gt;</span>
-</span><span class='line'><span class="nt">&lt;li&gt;</span>Parish<span class="nt">&lt;/li&gt;</span>
-</span><span class='line'><span class="nt">&lt;/ol&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Sederhana.</p>
-
-<p>Disisi lain, octopress menyediakan tool untuk highlight code.
-Toolnya ada dua, yaitu <a href="http://octopress.org/docs/plugins/backtick-codeblock/">backtick</a> dan <a href="http://octopress.org/docs/plugins/codeblock/">codeblock</a>.<br/>
-Yang menjadi masalah, saat markdown list digunakan bersamaan dengan backtick. Efeknya, markdown list-nya ga jalan.<br/>
-Solusinya, penggunaan backtick diganti dengan codeblock.</p>
 ]]></content>
   </entry>
   

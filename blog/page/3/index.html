@@ -9,7 +9,8 @@
 	<meta name="author" content="Moh Hasbi Assidiqi">
 
 	
-	<meta name="description" content="Dec 12th, 2012 Misc Belajar belajar itu sulit, jika terburu-buru. you just can&#8217;t force the knowledge to enter yourself. you can only try and &hellip;">
+	<meta name="description" content="Dec 18th, 2012 Misc List Open Port on Mac Osx untuk melihat current user opened port: 1
+lsof -i -P | grep -i &quot;listen&quot; untuk melihat &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +86,130 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-18T12:39:00+07:00" data-updated="true" itemprop="datePublished">Dec 18<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/misc/'>Misc</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/12/18/list-open-port-on-mac-osx/" itemprop="url">List Open Port on Mac Osx</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>untuk melihat current user opened port:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>lsof -i -P | grep -i <span class="s2">&quot;listen&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>untuk melihat keseluruhan system:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo lsof -i -P | grep -i <span class="s2">&quot;listen&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://od-eon.com/blogs/calvin/list-open-ports-mac-os-x/">referensi</a></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-12T05:32:00+07:00" data-updated="true" itemprop="datePublished">Dec 12<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/misc/'>Misc</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/12/12/markdown-list-not-working-when-using-backtick-in-octopress/" itemprop="url">Markdown List Not Working When Using Backtick in Octopress</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Beberapa hari ini, mulai migrasi dari wordpress ke octopress.<br/>
+First impressionnya mantab.</p>
+
+<p>Hanya saja, seperti biasa, selalu ada masalah</p>
+
+<p>Yang menarik, pembuatannya postnya tidak menggunakan HTML melainkan Markdown
+konsepnya, sebuah tool yang mengubah plain text menjadi HTML.</p>
+
+<p>Salah satu yang saya pakai adalah ordered list.<br/>
+Caranya <a href="http://daringfireball.net/projects/markdown/syntax#list">seperti berikut</a>.<br/>
+Pada file markdown, cukup ditulis sebagai berikut</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. Bird
+</span><span class='line'>2. McHale
+</span><span class='line'>3. Parish</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Maka oleh Markdown akan di convert menjadi</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;ol&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;</span>Bird<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;</span>McHale<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;li&gt;</span>Parish<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ol&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sederhana.</p>
+
+<p>Disisi lain, octopress menyediakan tool untuk highlight code.
+Toolnya ada dua, yaitu <a href="http://octopress.org/docs/plugins/backtick-codeblock/">backtick</a> dan <a href="http://octopress.org/docs/plugins/codeblock/">codeblock</a>.<br/>
+Yang menjadi masalah, saat markdown list digunakan bersamaan dengan backtick. Efeknya, markdown list-nya ga jalan.<br/>
+Solusinya, penggunaan backtick diganti dengan codeblock.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -537,55 +662,13 @@ di folder tersebut terdapat driver bootcamp untuk 64bit dengan nama &#8220;BootC
 
 </article>
 
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-02T21:34:00+07:00" data-updated="true" itemprop="datePublished">Dec 2<span>nd</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/actionscript-3/'>ActionScript 3</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/12/02/compile-actionscript-3-using-mxmlc/" itemprop="url">Compile ActionScript 3 Using MXMLC</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>berikut adalah perintah terminal untuk meng-compile file actionscript 3</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>mxmlc -compiler.source-path<span class="o">=</span>./src -static-link-runtime-shared-libraries<span class="o">=</span><span class="nb">true</span> -output bin/HelloAS3.swf src/Main.as
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>perintah ini dijalankan pada root folder dari project AS3
-dimana folder source terletak pada &#8220;src&#8221;
-kemudian hasil kompilasi terletak pada &#8220;bin&#8221;</p>
-
-		
-		
-	</div>
-
-</article>
-
 </div>
 <nav id="pagenavi">
     
         <a href="/blog/page/2/" class="prev">Prev</a>
     
+    
+        <a href="/blog/page/4/" class="next">Next</a>
     
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav></div>
