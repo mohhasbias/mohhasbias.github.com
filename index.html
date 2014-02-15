@@ -9,7 +9,7 @@
 	<meta name="author" content="Moh Hasbi Assidiqi">
 
 	
-	<meta name="description" content="Feb 9th, 2014 Development Tools Untuk Rapid Html Prototyping beberapa kombinasi tools yang dapat mempercepat proses pembuatan html prototype adalah &hellip;">
+	<meta name="description" content="Feb 15th, 2014 Reverse Scrolling in Ubuntu Langkah-langkah untuk mengaktifkan reverse scrolling pada ubuntu: Dapatkan id dari touchpad yang &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +85,101 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-15T19:22:00+07:00" data-updated="true" itemprop="datePublished">Feb 15<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/02/15/reverse-scrolling-in-ubuntu/" itemprop="url">Reverse Scrolling in Ubuntu</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Langkah-langkah untuk mengaktifkan reverse scrolling pada ubuntu:</p>
+
+<ol>
+<li>Dapatkan id dari touchpad yang digunakan</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ xinput list
+</span><span class='line'>  ⎡ Virtual core pointer                                id=2    [master pointer  (3)]
+</span><span class='line'>  ⎜   ↳ Virtual core XTEST pointer                id=4    [slave  pointer  (2)]
+</span><span class='line'>  ⎜   ↳ ETPS/2 Elantech Touchpad                  id=12   [slave  pointer  (2)]
+</span><span class='line'>  ⎣ Virtual core keyboard                               id=3    [master keyboard (2)]
+</span><span class='line'>          ↳ Virtual core XTEST keyboard                 id=5    [slave  keyboard (3)]</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>dari output tersebut dapat diperoleh dari touchpad yang ingin dimodif yaitu id=12
+</code></pre>
+
+<ol>
+<li>Dapatkan properti yang mengatur tentang scrolling</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ xinput list-props 12 | grep -i "scrolling distance"
+</span><span class='line'>      Synaptics Scrolling Distance (270): 74, 74
+</span><span class='line'>      Synaptics Circular Scrolling Distance (283):    0.100000</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>yang mengatur arah scrolling adalah properti nomor 270.
+</code></pre>
+
+<ol>
+<li>Ubah arah scrolling</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ xinput set-prop 12 270 -74 -74</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Restart nautilus</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ nautilus -q && nautilus -n &</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Enjoy</li>
+</ol>
+
+
+<p>Sumber:
+<a href="http://andym3.wordpress.com/2012/05/27/fixing-natural-scrolling-in-ubuntu-12-04/">Fixing Natural Scrolling in Ubuntu</a></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -583,55 +678,6 @@ yang artinya, kalau ingin membuat website, ganti saja template default dengan te
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rvm use ruby@gemset</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-06T08:40:00+07:00" data-updated="true" itemprop="datePublished">Jan 6<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/rails/'>Rails</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/01/06/reinstall-gemfile/" itemprop="url">Reinstall Gemfile</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>to reinstall Gemfile
-1. remove current gem</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem uninstall gem-name</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>reinstall using bundler</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
 
 
 		
