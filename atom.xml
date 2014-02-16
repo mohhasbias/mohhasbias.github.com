@@ -4,7 +4,7 @@
   <title><![CDATA[Mengabdi melalui Programming]]></title>
   <link href="http://mohhasbias.github.com/atom.xml" rel="self"/>
   <link href="http://mohhasbias.github.com/"/>
-  <updated>2014-02-15T19:47:47+07:00</updated>
+  <updated>2014-02-16T09:18:12+07:00</updated>
   <id>http://mohhasbias.github.com/</id>
   <author>
     <name><![CDATA[Moh Hasbi Assidiqi]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Enabling inverse scrolling in ubuntu]]></title>
+    <link href="http://mohhasbias.github.com/blog/2014/02/16/enabling-inverse-scrolling-in-ubuntu/"/>
+    <updated>2014-02-16T09:09:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2014/02/16/enabling-inverse-scrolling-in-ubuntu</id>
+    <content type="html"><![CDATA[<p>berikut adalah shell script untuk me-reverse scrolling pada sebuah <code>device_name</code></p>
+
+<figure class='code'><figcaption><span>natural_scrolling.sh </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">device_name</span><span class="o">=</span><span class="s2">&quot;ETPS/2 Elantech Touchpad&quot;</span>
+</span><span class='line'><span class="nv">id</span><span class="o">=</span><span class="sb">`</span>xinput list --id-only <span class="s2">&quot;$device_name&quot;</span><span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Device ID: &quot;</span> <span class="nv">$id</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">prop</span><span class="o">=</span><span class="sb">`</span>xinput list-props 12 | grep -m 1 -i <span class="s2">&quot;scrolling distance&quot;</span> | grep -o -e <span class="s1">&#39;[[:digit:]]\+&#39;</span><span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Current Properti: &quot;</span> <span class="nv">$prop</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">new_prop</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$prop</span> | awk <span class="s1">&#39;{print $1, -$2, -$3&#39;</span><span class="o">}</span><span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;New Properti: &quot;</span> <span class="nv">$new_prop</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># apply new property setting</span>
+</span><span class='line'>xinput <span class="nb">set</span>-prop <span class="nv">$id</span> <span class="nv">$new_prop</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Reverse scrolling in ubuntu]]></title>
@@ -515,15 +564,6 @@ yang artinya, kalau ingin membuat website, ganti saja template default dengan te
     <updated>2012-12-27T15:43:00+07:00</updated>
     <id>http://mohhasbias.github.com/blog/2012/12/27/set-proxy-for-apt</id>
     <content type="html"><![CDATA[<p><a href="http://askubuntu.com/questions/89437/how-to-install-packages-with-apt-get-on-a-system-connected-via-proxy">set proxy for apt</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[install virtualbox guest on vagrant lucid32 box]]></title>
-    <link href="http://mohhasbias.github.com/blog/2012/12/26/install-virtualbox-guest-on-vagrant-lucid32-box/"/>
-    <updated>2012-12-26T17:06:00+07:00</updated>
-    <id>http://mohhasbias.github.com/blog/2012/12/26/install-virtualbox-guest-on-vagrant-lucid32-box</id>
-    <content type="html"><![CDATA[<p><a href="http://software.darrenthetiger.com/2012/01/installing-virtualbox-guest-additions-on-a-vagrant-lucid64-box/">install guest on lucid64</a></p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
 	<meta name="author" content="Moh Hasbi Assidiqi">
 
 	
-	<meta name="description" content="Feb 15th, 2014 Reverse Scrolling in Ubuntu Langkah-langkah untuk mengaktifkan reverse scrolling pada ubuntu: Dapatkan id dari touchpad yang &hellip;">
+	<meta name="description" content="Feb 16th, 2014 Enabling Inverse Scrolling in Ubuntu berikut adalah shell script untuk me-reverse scrolling pada sebuah device_name natural_scrolling &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +85,77 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-16T09:09:00+07:00" data-updated="true" itemprop="datePublished">Feb 16<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/02/16/enabling-inverse-scrolling-in-ubuntu/" itemprop="url">Enabling Inverse Scrolling in Ubuntu</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>berikut adalah shell script untuk me-reverse scrolling pada sebuah <code>device_name</code></p>
+
+<figure class='code'><figcaption><span>natural_scrolling.sh </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">device_name</span><span class="o">=</span><span class="s2">&quot;ETPS/2 Elantech Touchpad&quot;</span>
+</span><span class='line'><span class="nv">id</span><span class="o">=</span><span class="sb">`</span>xinput list --id-only <span class="s2">&quot;$device_name&quot;</span><span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Device ID: &quot;</span> <span class="nv">$id</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">prop</span><span class="o">=</span><span class="sb">`</span>xinput list-props 12 | grep -m 1 -i <span class="s2">&quot;scrolling distance&quot;</span> | grep -o -e <span class="s1">&#39;[[:digit:]]\+&#39;</span><span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Current Properti: &quot;</span> <span class="nv">$prop</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">new_prop</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$prop</span> | awk <span class="s1">&#39;{print $1, -$2, -$3&#39;</span><span class="o">}</span><span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;New Properti: &quot;</span> <span class="nv">$new_prop</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># apply new property setting</span>
+</span><span class='line'>xinput <span class="nb">set</span>-prop <span class="nv">$id</span> <span class="nv">$new_prop</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -576,109 +647,6 @@ yang artinya, kalau ingin membuat website, ganti saja template default dengan te
 
 <p>untuk bisa mengaktifkan tanpa harus membuat file htaccess, cukup ganti menu permalinks pada wordpress. ganti dengan opsi manapun selain default. sebagai contoh
 <img src="images/permalink_options.png"></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-07T13:46:00+07:00" data-updated="true" itemprop="datePublished">Jan 7<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/01/07/install-ruby-on-mac-os-x-leopard/" itemprop="url">Install Ruby on Mac OS X Leopard</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<ol>
-<li>install brew
-
-<ul>
-<li><a href="http://mxcl.github.com/homebrew/">install brew</a></li>
-<li>install git using brew</li>
-</ul>
-</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>brew install git</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>install rvm
-
-<ul>
-<li><a href="https://rvm.io/">install rvm and ruby</a></li>
-</ul>
-</li>
-<li>install ruby and manage gemset using rvm
-
-<ul>
-<li>install ruby using rvm</li>
-</ul>
-</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm install ruby 1.9.3</span></code></pre></td></tr></table></div></figure>
-
-
-<pre><code>- getting list of supported rubies
-</code></pre>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm list known</span></code></pre></td></tr></table></div></figure>
-
-
-<pre><code>- use installed rubies
-</code></pre>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm use ruby1.9.3</span></code></pre></td></tr></table></div></figure>
-
-
-<pre><code>- create gemset
-</code></pre>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm gemset create gemset-name</span></code></pre></td></tr></table></div></figure>
-
-
-<pre><code>- use gemset
-</code></pre>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm gemset use gemset-name</span></code></pre></td></tr></table></div></figure>
-
-
-<pre><code>- shorthand
-</code></pre>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rvm use ruby@gemset</span></code></pre></td></tr></table></div></figure>
-
 
 		
 		
