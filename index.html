@@ -9,7 +9,7 @@
 	<meta name="author" content="Moh Hasbi Assidiqi">
 
 	
-	<meta name="description" content="Feb 16th, 2014 Enabling Inverse Scrolling in Ubuntu berikut adalah shell script untuk me-reverse scrolling pada sebuah device_name natural_scrolling &hellip;">
+	<meta name="description" content="Feb 22nd, 2014 Broken Linenumber After Codeblok in Octopress beberapa hari nyoba pakai linenumber dan codeblock di octopress selalu tidak berhasil. &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +85,214 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-22T06:17:00+07:00" data-updated="true" itemprop="datePublished">Feb 22<span>nd</span>, 2014</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/02/22/broken-linenumber-after-codeblok/" itemprop="url">Broken Linenumber After Codeblok in Octopress</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>beberapa hari nyoba pakai linenumber dan codeblock di octopress selalu tidak berhasil.
+browsing-browsing sampai nyasar ke repo-nya <a href="https://github.com/imathis/octopress">octopress</a>.
+kesimpulannya, memang octopress belum support. masih mencari solusi yang clean (katanya <a href="https://github.com/imathis/octopress/pull/814">brandon imathis</a>).</p>
+
+<p>Solusinya:
+back to old working HTML</p>
+
+<p>contoh:
+jika menggunakan codeblock biasa:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. bla bla bla
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  some code
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}
+</span><span class='line'>
+</span><span class='line'>2. bla bla bla lagi
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>akan menghasilkan:</p>
+
+<ol>
+<li>bla bla bla</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  some code
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>bla bla bla lagi</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>maka numberingnya akan rusak.
+untuk membetulkannya, back to html</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ol>
+</span><span class='line'>&lt;li> bla bla bla
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  some code
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}
+</span><span class='line'>&lt;/li>
+</span><span class='line'>&lt;li> bla bla bla lagi
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}
+</span><span class='line'>&lt;/li>
+</span><span class='line'>&lt;/ol></span></code></pre></td></tr></table></div></figure>
+
+
+<p>sehingga menghasilkan:</p>
+
+<ol>
+<li> bla bla bla
+    
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  some code
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+</li>
+<li> bla bla bla lagi
+    
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+</li>
+</ol>
+
+
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-22T05:55:00+07:00" data-updated="true" itemprop="datePublished">Feb 22<span>nd</span>, 2014</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/02/22/git-cheatsheet/" itemprop="url">Git Cheatsheet</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>berikut adalah beberapa contoh perintah git:</p>
+
+<ol>
+<li> Show previously committed files
+                
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git diff --name-only HEAD^1</span></code></pre></td></tr></table></div></figure>
+
+</li>
+
+<li> Show short formatted log
+                
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git log --oneline</span></code></pre></td></tr></table></div></figure>
+
+</li>
+</ol>
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -183,10 +391,9 @@
 		<p>Langkah-langkah untuk mengaktifkan reverse scrolling pada ubuntu:</p>
 
 <ol>
-<li>Dapatkan id dari touchpad yang digunakan</li>
-</ol>
+<li> Dapatkan id dari touchpad yang digunakan 
 
-
+    
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -201,14 +408,12 @@
 </span><span class='line'>          ↳ Virtual core XTEST keyboard                 id=5    [slave  keyboard (3)]</span></code></pre></td></tr></table></div></figure>
 
 
-<pre><code>dari output tersebut dapat diperoleh dari touchpad yang ingin dimodif yaitu id=12
-</code></pre>
+    dari output tersebut dapat diperoleh dari touchpad yang ingin dimodif yaitu id=12
+</li>
 
-<ol>
-<li>Dapatkan properti yang mengatur tentang scrolling</li>
-</ol>
-
-
+<li> Dapatkan properti yang mengatur tentang scrolling
+    
+    
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -217,29 +422,27 @@
 </span><span class='line'>      Synaptics Circular Scrolling Distance (283):    0.100000</span></code></pre></td></tr></table></div></figure>
 
 
-<pre><code>yang mengatur arah scrolling adalah properti nomor 270.
-</code></pre>
+    yang mengatur arah scrolling adalah properti nomor 270.
+</li>
 
-<ol>
-<li>Ubah arah scrolling</li>
-</ol>
+<li> Ubah arah scrolling
 
-
+    
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ xinput set-prop 12 270 -74 -74</span></code></pre></td></tr></table></div></figure>
 
+</li>
 
-<ol>
-<li>Restart nautilus</li>
-</ol>
-
-
+<li> Restart nautilus
+    
+    
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ nautilus -q && nautilus -n &</span></code></pre></td></tr></table></div></figure>
 
+</li>
 
-<ol>
-<li>Enjoy</li>
+<li> Enjoy
+</li>
 </ol>
 
 
@@ -540,113 +743,6 @@ akan tetapi, properti tersebut tidak mengubah huruf lain menjadi kecil. Karenany
  <code>update-grub</code></li>
 </ol>
 
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-17T20:45:00+07:00" data-updated="true" itemprop="datePublished">May 17<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/windows-7/'>Windows 7</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/05/17/cara-memperbaiki-windows-7-bootmgr-is-missing/" itemprop="url">Cara Memperbaiki Windows 7 (BOOTMGR Is MISSING)</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>Jika anda mencoba linux semisal ubuntu, seringkali anda menginstall-nya di partisi lain yang biasa disebut dengan <a href="http://en.wikipedia.org/wiki/Multi_boot">dual boot</a>. Dalam dunia dual boot, kemungkinan besar anda akan tersandung ke masalah boot manager.</p>
-
-<p>salah satu contoh masalahnya seperti ini, ketika komputer dihidupkan dan hendak booting ke windows 7, muncul tampilan berikut</p>
-
-<p><img src="/images/bootmgr_error.png"></p>
-
-<p>cara membetulkannya sebagai berikut:</p>
-
-<ol>
-<li>booting menggunakan installer windows</li>
-<li>kemudian pilih menu &#8220;Repair your computer&#8221;</li>
-<li>kemudian pilih menu &#8220;Use recovery tools that &#8230; (bla bla bla)&#8221;. klik Next</li>
-<li><p>Pada tampilan ini, pilih menu &#8220;Startup Repair&#8221;</p>
-
-<p> <img src="/images/system_recovery_tools.png"></p></li>
-<li><p>Tunggu prosesnya berjalan</p>
-
-<p> <img src="/images/startup_repair.png"></p></li>
-<li><p>Jika proses berhasil, tekan Finish untuk merestart komputer.</p></li>
-<li>Jika berhasil maka setelah restart anda akan mendapatkan kembali windows anda. Tanpa harus install ulang.</li>
-</ol>
-
-
-<p>sumber: <a href="http://www.sevenforums.com/tutorials/104341-bootmgr-missing-fix.html">How to fix the &#8220;Bootmgr is missing&#8221;</a></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-09T11:37:00+07:00" data-updated="true" itemprop="datePublished">May 9<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/wordpress/'>wordpress</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/05/09/mengaktifkan-template-404-pada-wordpress/" itemprop="url">Mengaktifkan Template 404 Pada Wordpress</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>beberapa hari ini berkutat dengan pembuatan website berbasis wordpress.
-sangat menyenangkan karena wordpress merupakan framework berbasis template.
-yang artinya, kalau ingin membuat website, ganti saja template default dengan template yang diinginkan.</p>
-
-<p>salah satu contohnya adalah template untuk error 404. sebuah error yang salah satu kemunculannya karena user salah ketik URL.</p>
-
-<p>secara teori, 404 merupakan jalan buntu pada sebuah website. di halaman ini perlu diberikan saran untuk user tentang apa yang perlu dilakukan. ada banyak contoh kreatif yang bisa jadi <a href="http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/">sumber inspirasi</a>.</p>
-
-<p>di wordpress, template yang bertanggung jawab untuk 404 adalah file <code>404.php</code>.</p>
-
-<p>secara default, template ini tidak akan aktif kalau kita tidak membuat file htaccess untuk mengaktifkannya. apapun perubahan yang kita lakukan pada file <code>404.php</code> tidak akan ngefek. yang muncul hanyalah 404 default bawaan web server. misalnya seperti ini kalau kita pakai apache.
-<img src="images/apache_404_default.gif"></p>
-
-<p>untuk bisa mengaktifkan tanpa harus membuat file htaccess, cukup ganti menu permalinks pada wordpress. ganti dengan opsi manapun selain default. sebagai contoh
-<img src="images/permalink_options.png"></p>
 
 		
 		

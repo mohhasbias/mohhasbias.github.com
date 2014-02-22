@@ -4,7 +4,7 @@
   <title><![CDATA[Mengabdi melalui Programming]]></title>
   <link href="http://mohhasbias.github.com/atom.xml" rel="self"/>
   <link href="http://mohhasbias.github.com/"/>
-  <updated>2014-02-16T09:18:12+07:00</updated>
+  <updated>2014-02-22T07:06:36+07:00</updated>
   <id>http://mohhasbias.github.com/</id>
   <author>
     <name><![CDATA[Moh Hasbi Assidiqi]]></name>
@@ -12,6 +12,170 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Broken linenumber after codeblok in Octopress]]></title>
+    <link href="http://mohhasbias.github.com/blog/2014/02/22/broken-linenumber-after-codeblok/"/>
+    <updated>2014-02-22T06:17:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2014/02/22/broken-linenumber-after-codeblok</id>
+    <content type="html"><![CDATA[<p>beberapa hari nyoba pakai linenumber dan codeblock di octopress selalu tidak berhasil.
+browsing-browsing sampai nyasar ke repo-nya <a href="https://github.com/imathis/octopress">octopress</a>.
+kesimpulannya, memang octopress belum support. masih mencari solusi yang clean (katanya <a href="https://github.com/imathis/octopress/pull/814">brandon imathis</a>).</p>
+
+<p>Solusinya:
+back to old working HTML</p>
+
+<p>contoh:
+jika menggunakan codeblock biasa:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. bla bla bla
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  some code
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}
+</span><span class='line'>
+</span><span class='line'>2. bla bla bla lagi
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>akan menghasilkan:</p>
+
+<ol>
+<li>bla bla bla</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  some code
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>bla bla bla lagi</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>maka numberingnya akan rusak.
+untuk membetulkannya, back to html</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ol>
+</span><span class='line'>&lt;li> bla bla bla
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  some code
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}
+</span><span class='line'>&lt;/li>
+</span><span class='line'>&lt;li> bla bla bla lagi
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}
+</span><span class='line'>&lt;/li>
+</span><span class='line'>&lt;/ol></span></code></pre></td></tr></table></div></figure>
+
+
+<p>sehingga menghasilkan:</p>
+
+<ol>
+<li> bla bla bla
+    
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  some code
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+</li>
+<li> bla bla bla lagi
+    
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+</li>
+</ol>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git Cheatsheet]]></title>
+    <link href="http://mohhasbias.github.com/blog/2014/02/22/git-cheatsheet/"/>
+    <updated>2014-02-22T05:55:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2014/02/22/git-cheatsheet</id>
+    <content type="html"><![CDATA[<p>berikut adalah beberapa contoh perintah git:</p>
+
+<ol>
+<li> Show previously committed files
+                
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git diff --name-only HEAD^1</span></code></pre></td></tr></table></div></figure>
+
+</li>
+
+<li> Show short formatted log
+                
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git log --oneline</span></code></pre></td></tr></table></div></figure>
+
+</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Enabling inverse scrolling in ubuntu]]></title>
@@ -70,10 +234,9 @@
     <content type="html"><![CDATA[<p>Langkah-langkah untuk mengaktifkan reverse scrolling pada ubuntu:</p>
 
 <ol>
-<li>Dapatkan id dari touchpad yang digunakan</li>
-</ol>
+<li> Dapatkan id dari touchpad yang digunakan 
 
-
+    
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -88,14 +251,12 @@
 </span><span class='line'>          ↳ Virtual core XTEST keyboard                 id=5    [slave  keyboard (3)]</span></code></pre></td></tr></table></div></figure>
 
 
-<pre><code>dari output tersebut dapat diperoleh dari touchpad yang ingin dimodif yaitu id=12
-</code></pre>
+    dari output tersebut dapat diperoleh dari touchpad yang ingin dimodif yaitu id=12
+</li>
 
-<ol>
-<li>Dapatkan properti yang mengatur tentang scrolling</li>
-</ol>
-
-
+<li> Dapatkan properti yang mengatur tentang scrolling
+    
+    
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -104,29 +265,27 @@
 </span><span class='line'>      Synaptics Circular Scrolling Distance (283):    0.100000</span></code></pre></td></tr></table></div></figure>
 
 
-<pre><code>yang mengatur arah scrolling adalah properti nomor 270.
-</code></pre>
+    yang mengatur arah scrolling adalah properti nomor 270.
+</li>
 
-<ol>
-<li>Ubah arah scrolling</li>
-</ol>
+<li> Ubah arah scrolling
 
-
+    
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ xinput set-prop 12 270 -74 -74</span></code></pre></td></tr></table></div></figure>
 
+</li>
 
-<ol>
-<li>Restart nautilus</li>
-</ol>
-
-
+<li> Restart nautilus
+    
+    
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ nautilus -q && nautilus -n &</span></code></pre></td></tr></table></div></figure>
 
+</li>
 
-<ol>
-<li>Enjoy</li>
+<li> Enjoy
+</li>
 </ol>
 
 
@@ -496,74 +655,6 @@ yang artinya, kalau ingin membuat website, ganti saja template default dengan te
     <updated>2012-12-31T00:11:00+07:00</updated>
     <id>http://mohhasbias.github.com/blog/2012/12/31/using-jquery-in-coffeescript</id>
     <content type="html"><![CDATA[<p><a href="http://aaronrussell.co.uk/articles/using-coffeescript-with-jquery/">Using jQuery with CoffeeScript</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Common Git Command]]></title>
-    <link href="http://mohhasbias.github.com/blog/2012/12/29/common-git-command/"/>
-    <updated>2012-12-29T05:49:00+07:00</updated>
-    <id>http://mohhasbias.github.com/blog/2012/12/29/common-git-command</id>
-    <content type="html"><![CDATA[<p>Undoing commit in some scenarios</p>
-
-<ol>
-<li>Forgot adding files</li>
-</ol>
-
-
-<!-- -->
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git commit --amend</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>Reset the repository to the last commited state (remove any current changes)</li>
-</ol>
-
-
-<!-- -->
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># clean stage index
-</span><span class='line'>      git reset --hard
-</span><span class='line'>      # clean unstage files
-</span><span class='line'>      git clean -d -f # use -n to dry-run</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>unstage</li>
-</ol>
-
-
-<!-- -->
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git reset HEAD</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[set proxy for apt]]></title>
-    <link href="http://mohhasbias.github.com/blog/2012/12/27/set-proxy-for-apt/"/>
-    <updated>2012-12-27T15:43:00+07:00</updated>
-    <id>http://mohhasbias.github.com/blog/2012/12/27/set-proxy-for-apt</id>
-    <content type="html"><![CDATA[<p><a href="http://askubuntu.com/questions/89437/how-to-install-packages-with-apt-get-on-a-system-connected-via-proxy">set proxy for apt</a></p>
 ]]></content>
   </entry>
   

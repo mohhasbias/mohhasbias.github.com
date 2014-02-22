@@ -5,16 +5,12 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Reverse scrolling in ubuntu - Mengabdi melalui Programming</title>
+	<title>Broken linenumber after codeblok in Octopress - Mengabdi melalui Programming</title>
 	<meta name="author" content="Moh Hasbi Assidiqi">
 
 	
-	<meta name="description" content="Reverse Scrolling in Ubuntu Langkah-langkah untuk mengaktifkan reverse scrolling pada ubuntu: Dapatkan id dari touchpad yang digunakan 1
-2
-3
-4
-5
-6 &hellip;">
+	<meta name="description" content="Broken Linenumber After Codeblok in Octopress beberapa hari nyoba pakai linenumber dan codeblock di octopress selalu tidak berhasil.
+browsing- &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +20,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="Mengabdi melalui Programming" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://mohhasbias.github.com/blog/2014/02/15/reverse-scrolling-in-ubuntu/">
+	<link rel="canonical" href="http://mohhasbias.github.com/blog/2014/02/22/broken-linenumber-after-codeblok/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -89,67 +85,137 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<h1 class="title" itemprop="name">Reverse Scrolling in Ubuntu</h1>
-	<div class="entry-content" itemprop="articleBody"><p>Langkah-langkah untuk mengaktifkan reverse scrolling pada ubuntu:</p>
+	<h1 class="title" itemprop="name">Broken Linenumber After Codeblok in Octopress</h1>
+	<div class="entry-content" itemprop="articleBody"><p>beberapa hari nyoba pakai linenumber dan codeblock di octopress selalu tidak berhasil.
+browsing-browsing sampai nyasar ke repo-nya <a href="https://github.com/imathis/octopress">octopress</a>.
+kesimpulannya, memang octopress belum support. masih mencari solusi yang clean (katanya <a href="https://github.com/imathis/octopress/pull/814">brandon imathis</a>).</p>
 
-<ol>
-<li> Dapatkan id dari touchpad yang digunakan 
+<p>Solusinya:
+back to old working HTML</p>
 
-    
+<p>contoh:
+jika menggunakan codeblock biasa:</p>
+
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ xinput list
-</span><span class='line'>  ⎡ Virtual core pointer                                id=2    [master pointer  (3)]
-</span><span class='line'>  ⎜   ↳ Virtual core XTEST pointer                id=4    [slave  pointer  (2)]
-</span><span class='line'>  ⎜   ↳ ETPS/2 Elantech Touchpad                  id=12   [slave  pointer  (2)]
-</span><span class='line'>  ⎣ Virtual core keyboard                               id=3    [master keyboard (2)]
-</span><span class='line'>          ↳ Virtual core XTEST keyboard                 id=5    [slave  keyboard (3)]</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. bla bla bla
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  some code
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}
+</span><span class='line'>
+</span><span class='line'>2. bla bla bla lagi
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}</span></code></pre></td></tr></table></div></figure>
 
 
-    dari output tersebut dapat diperoleh dari touchpad yang ingin dimodif yaitu id=12
-</li>
+<p>akan menghasilkan:</p>
 
-<li> Dapatkan properti yang mengatur tentang scrolling
-    
+<ol>
+<li>bla bla bla</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  some code
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>bla bla bla lagi</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>maka numberingnya akan rusak.
+untuk membetulkannya, back to html</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ol>
+</span><span class='line'>&lt;li> bla bla bla
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  some code
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}
+</span><span class='line'>&lt;/li>
+</span><span class='line'>&lt;li> bla bla bla lagi
+</span><span class='line'>  {% codeblock %}
+</span><span class='line'>  ...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...
+</span><span class='line'>  {% endcodeblock %}
+</span><span class='line'>&lt;/li>
+</span><span class='line'>&lt;/ol></span></code></pre></td></tr></table></div></figure>
+
+
+<p>sehingga menghasilkan:</p>
+
+<ol>
+<li> bla bla bla
     
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ xinput list-props 12 | grep -i "scrolling distance"
-</span><span class='line'>      Synaptics Scrolling Distance (270): 74, 74
-</span><span class='line'>      Synaptics Circular Scrolling Distance (283):    0.100000</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  some code
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
 
-
-    yang mengatur arah scrolling adalah properti nomor 270.
 </li>
-
-<li> Ubah arah scrolling
-
+<li> bla bla bla lagi
     
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ xinput set-prop 12 270 -74 -74</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>  programming is fun
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
 
-</li>
-
-<li> Restart nautilus
-    
-    
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ nautilus -q && nautilus -n &</span></code></pre></td></tr></table></div></figure>
-
-</li>
-
-<li> Enjoy
 </li>
 </ol>
 
 
-<p>Sumber:
-<a href="http://andym3.wordpress.com/2012/05/27/fixing-natural-scrolling-in-ubuntu-12-04/">Fixing Natural Scrolling in Ubuntu</a></p>
+
 </div>
 
 </article>
@@ -190,8 +256,8 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mohhasbias.github.com/blog/2014/02/15/reverse-scrolling-in-ubuntu/';
-        var disqus_url = 'http://mohhasbias.github.com/blog/2014/02/15/reverse-scrolling-in-ubuntu/';
+        var disqus_identifier = 'http://mohhasbias.github.com/blog/2014/02/22/broken-linenumber-after-codeblok/';
+        var disqus_url = 'http://mohhasbias.github.com/blog/2014/02/22/broken-linenumber-after-codeblok/';
         var disqus_script = 'embed.js';
       
     (function () {
