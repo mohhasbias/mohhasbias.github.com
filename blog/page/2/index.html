@@ -9,7 +9,7 @@
 	<meta name="author" content="Moh Hasbi Assidiqi">
 
 	
-	<meta name="description" content="May 17th, 2013 Windows 7 Cara Memperbaiki Windows 7 (BOOTMGR Is MISSING) Jika anda mencoba linux semisal ubuntu, seringkali anda menginstall-nya di &hellip;">
+	<meta name="description" content="May 18th, 2013 Linux Update Grub Menggunakan liveCD Baru saja kembali nguprek ubuntu setelah sekian lama ditinggal. Dan seperti biasa, saat main- &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +85,61 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-18T05:05:00+07:00" data-updated="true" itemprop="datePublished">May 18<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/linux/'>Linux</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/05/18/update-grub-menggunakan-livecd/" itemprop="url">Update Grub Menggunakan liveCD</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Baru saja kembali nguprek ubuntu setelah sekian lama ditinggal. Dan seperti biasa, saat main-main dual boot, bootloader-nya bermasalah.</p>
+
+<p>Iseng-iseng ganti konfigurasi grub jadinya malah ilang grub-nya. Setiap kali booting, langsung masuk ke windows.</p>
+
+<p>Alhamdulillah tidak terlalu panik, masih bisa tenang. Langsung kepikiran untuk pakai Live-CD</p>
+
+<p>Berikut adalah langkah-langkah menggunakan Live CD untuk meng-update grub</p>
+
+<ol>
+<li>Booting menggunakan Live CD, bisa pakai yang berbasis CD/DVD, bisa juga pakai USB. Saya pakai USB karena lappie-nya ga ada DVD drive-nya.</li>
+<li>Setelah masuk Live CD, buka terminal. Saya pakai Ubuntu Live CD, sehingga bisa pakai perintah <code>Ctrl + Alt + T</code> untuk membuka terminal.</li>
+<li>Mount partisi yang ingin di-update, contoh<br/>
+ <code>mount /dev/sda1 /mnt</code></li>
+<li>Mount file-file yang berhubungan dengan system/hardware menggunakan perintah berikut (sumber:<a href="http://ubuntuforums.org/showthread.php?t=2036730">ubuntuforum/update-grub</a>) <br/>
+ <code>for i in /dev /dev/pts /proc /sys /run; do sudo mount -B $i /mnt$i; done</code></li>
+<li>Aktifkan partisinya menggunakan chroot  <br/>
+ <code>sudo chroot /mnt</code></li>
+<li>Edit konfigurasi grub kemudian jalankan perintah update-grub<br/>
+ <code>update-grub</code></li>
+</ol>
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -509,41 +564,6 @@ yang artinya, kalau ingin membuat website, ganti saja template default dengan te
 	<h1 class="title" itemprop="name"><a href="/blog/2012/12/31/free-web-textures/" itemprop="url">Free Web Textures</a></h1>
 	<div class="entry-content" itemprop="articleBody">
 		<p><a href="http://subtlepatterns.com/">subtle patterns</a></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-31T00:11:00+07:00" data-updated="true" itemprop="datePublished">Dec 31<span>st</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/rails/'>Rails</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/12/31/using-jquery-in-coffeescript/" itemprop="url">Using jQuery in CoffeeScript</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p><a href="http://aaronrussell.co.uk/articles/using-coffeescript-with-jquery/">Using jQuery with CoffeeScript</a></p>
 
 		
 		

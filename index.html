@@ -9,7 +9,7 @@
 	<meta name="author" content="Moh Hasbi Assidiqi">
 
 	
-	<meta name="description" content="Feb 22nd, 2014 Broken Linenumber After Codeblok in Octopress beberapa hari nyoba pakai linenumber dan codeblock di octopress selalu tidak berhasil. &hellip;">
+	<meta name="description" content="Mar 24th, 2014 Wordpress 3.8 White Screen of Death Alhamdulillah, hari ini dapat solusi atas masalah yang terjadi sejak beberapa hari yang lalu. &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +85,44 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-24T05:14:00+07:00" data-updated="true" itemprop="datePublished">Mar 24<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/03/24/wordpress-3-dot-8-white-screen-of-death/" itemprop="url">Wordpress 3.8 White Screen of Death</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Alhamdulillah, hari ini dapat solusi atas masalah yang terjadi sejak beberapa hari yang lalu.</p>
+
+<p>lagi asik pakai wordpress, tiba-tiba kena <a href="https://codex.wordpress.org/Common_WordPress_Errors#The_White_Screen_of_Death">white screen of death</a>.</p>
+
+<p>solusinya, hapus plugin yang mencurigakan.
+dan ternyata penyebabnya adalah <a href="http://wordpress.org/plugins/wp-e-commerce/">wp-ecommerce</a>. belum tahu kenapa.</p>
+
+<p>Alhamdulillah sekarang sudah sembuh lagi wordpress-nya.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -687,61 +725,6 @@ akan tetapi, properti tersebut tidak mengubah huruf lain menjadi kecil. Karenany
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-18T05:05:00+07:00" data-updated="true" itemprop="datePublished">May 18<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/linux/'>Linux</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/05/18/update-grub-menggunakan-livecd/" itemprop="url">Update Grub Menggunakan liveCD</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>Baru saja kembali nguprek ubuntu setelah sekian lama ditinggal. Dan seperti biasa, saat main-main dual boot, bootloader-nya bermasalah.</p>
-
-<p>Iseng-iseng ganti konfigurasi grub jadinya malah ilang grub-nya. Setiap kali booting, langsung masuk ke windows.</p>
-
-<p>Alhamdulillah tidak terlalu panik, masih bisa tenang. Langsung kepikiran untuk pakai Live-CD</p>
-
-<p>Berikut adalah langkah-langkah menggunakan Live CD untuk meng-update grub</p>
-
-<ol>
-<li>Booting menggunakan Live CD, bisa pakai yang berbasis CD/DVD, bisa juga pakai USB. Saya pakai USB karena lappie-nya ga ada DVD drive-nya.</li>
-<li>Setelah masuk Live CD, buka terminal. Saya pakai Ubuntu Live CD, sehingga bisa pakai perintah <code>Ctrl + Alt + T</code> untuk membuka terminal.</li>
-<li>Mount partisi yang ingin di-update, contoh<br/>
- <code>mount /dev/sda1 /mnt</code></li>
-<li>Mount file-file yang berhubungan dengan system/hardware menggunakan perintah berikut (sumber:<a href="http://ubuntuforums.org/showthread.php?t=2036730">ubuntuforum/update-grub</a>) <br/>
- <code>for i in /dev /dev/pts /proc /sys /run; do sudo mount -B $i /mnt$i; done</code></li>
-<li>Aktifkan partisinya menggunakan chroot  <br/>
- <code>sudo chroot /mnt</code></li>
-<li>Edit konfigurasi grub kemudian jalankan perintah update-grub<br/>
- <code>update-grub</code></li>
-</ol>
 
 
 		

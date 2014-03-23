@@ -4,7 +4,7 @@
   <title><![CDATA[Mengabdi melalui Programming]]></title>
   <link href="http://mohhasbias.github.com/atom.xml" rel="self"/>
   <link href="http://mohhasbias.github.com/"/>
-  <updated>2014-02-22T07:06:36+07:00</updated>
+  <updated>2014-03-24T05:19:21+07:00</updated>
   <id>http://mohhasbias.github.com/</id>
   <author>
     <name><![CDATA[Moh Hasbi Assidiqi]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress 3.8 white screen of death]]></title>
+    <link href="http://mohhasbias.github.com/blog/2014/03/24/wordpress-3-dot-8-white-screen-of-death/"/>
+    <updated>2014-03-24T05:14:00+07:00</updated>
+    <id>http://mohhasbias.github.com/blog/2014/03/24/wordpress-3-dot-8-white-screen-of-death</id>
+    <content type="html"><![CDATA[<p>Alhamdulillah, hari ini dapat solusi atas masalah yang terjadi sejak beberapa hari yang lalu.</p>
+
+<p>lagi asik pakai wordpress, tiba-tiba kena <a href="https://codex.wordpress.org/Common_WordPress_Errors#The_White_Screen_of_Death">white screen of death</a>.</p>
+
+<p>solusinya, hapus plugin yang mencurigakan.
+dan ternyata penyebabnya adalah <a href="http://wordpress.org/plugins/wp-e-commerce/">wp-ecommerce</a>. belum tahu kenapa.</p>
+
+<p>Alhamdulillah sekarang sudah sembuh lagi wordpress-nya.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Broken linenumber after codeblok in Octopress]]></title>
@@ -646,15 +662,6 @@ yang artinya, kalau ingin membuat website, ganti saja template default dengan te
     <updated>2012-12-31T00:24:00+07:00</updated>
     <id>http://mohhasbias.github.com/blog/2012/12/31/free-web-textures</id>
     <content type="html"><![CDATA[<p><a href="http://subtlepatterns.com/">subtle patterns</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[using jQuery in CoffeeScript]]></title>
-    <link href="http://mohhasbias.github.com/blog/2012/12/31/using-jquery-in-coffeescript/"/>
-    <updated>2012-12-31T00:11:00+07:00</updated>
-    <id>http://mohhasbias.github.com/blog/2012/12/31/using-jquery-in-coffeescript</id>
-    <content type="html"><![CDATA[<p><a href="http://aaronrussell.co.uk/articles/using-coffeescript-with-jquery/">Using jQuery with CoffeeScript</a></p>
 ]]></content>
   </entry>
   
