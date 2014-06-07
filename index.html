@@ -9,7 +9,7 @@
 	<meta name="author" content="Moh Hasbi Assidiqi">
 
 	
-	<meta name="description" content="Mar 24th, 2014 Wordpress 3.8 White Screen of Death Alhamdulillah, hari ini dapat solusi atas masalah yang terjadi sejak beberapa hari yang lalu. &hellip;">
+	<meta name="description" content="Jun 7th, 2014 Absolute Center Using CSS Dalam CSS, sejauh yang saya tahu (AFAIK), belum ada fitur khusus untuk mengatur alignment sebuah gambar. &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +85,94 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-07T08:28:00+07:00" data-updated="true" itemprop="datePublished">Jun 7<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/06/07/absolute-center-using-css/" itemprop="url">Absolute Center Using CSS</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Dalam CSS, sejauh yang saya tahu (AFAIK), belum ada fitur khusus untuk mengatur alignment sebuah gambar.
+Dalam kegiatan layouting, salah satu yang dibutuhkan adalah fitur untuk align center secara horizontal maupun vertical.</p>
+
+<p>Ada banyak teknik untuk mengatur <a href="http://www.w3.org/Style/Examples/007/center.en.html">align center secara horizontal</a>.
+Begitu pula dengan teknik <a href="http://www.vanseodesign.com/css/vertical-centering/">align center secara vertical</a>.
+keseluruhan teknik tersebut memiliki kesamaan yaitu teknik yang dibuat dengan men-hack CSS.
+dimana, salah satu ciri khas dari CSS adalah kombinasi property tertentu akan menghasilkan hasil diluar dari sifat properti tersebut.
+Sebagai contoh, kombinasi property flat memungkinkan untuk membangun sistem grid berbasis CSS, contohnya <a href="http://960.gs">960 grid system</a>.</p>
+
+<h2>Horizontal Centering</h2>
+
+<p>salah satu teknik horizontal centering untuk image adalah dengan menggunakan property <code>text-align: center;</code>. property ini bisa digunakan pada elemen HTML yang memiliki property <code>display: block</code>.
+sebagai ilustrasi, perhatikan kode berikut. kode tersebut mensimulasikan sebuah skenario dimana terdapat container dari sebuah gambar yang memiliki ukuran lebih besar dari gambar tersebut.</p>
+
+<pre class="codepen" data-height="300" data-type="result" data-href="Gtcwl" data-user="mohhasbias"><code> </code></pre>
+
+
+<script async src="http://codepen.io:/assets/embed/ei.js"></script>
+
+
+<p>untuk membuatnya horizontal center, maka container perlu di set <code>text-align: center</code>. sehingga diperoleh hasil berikut,</p>
+
+<pre class="codepen" data-height="300" data-type="result" data-href="fwCce" data-user="mohhasbias"><code> </code></pre>
+
+
+<script async src="http://codepen.io:/assets/embed/ei.js"></script>
+
+
+<h2>Vertical Centering</h2>
+
+<p>salah satu teknik vertical centering adalah dengan mengkombinasi property <code>line-height</code> dan <code>vertical-align</code>.
+dari contoh skenario sebelumnya,</p>
+
+<pre class="codepen" data-height="300" data-type="result" data-href="Gtcwl" data-user="mohhasbias"><code> </code></pre>
+
+
+<script async src="http://codepen.io:/assets/embed/ei.js"></script>
+
+
+<p>posisi image pada skenario tersebut dapat dibuat vertical center dengan mengatur <code>img</code> dengan property <code>vertical-align: center</code>. kemudian pada parent dari <code>img</code> tersebut, property <code>line-height</code>-nya diatur sesuai dengan tinggi yang diharapkan, dalam contoh skenario ini sebesar <code>500px</code>. Sehingga diperoleh hasil berikut</p>
+
+<pre class="codepen" data-height="300" data-type="result" data-href="cxIyn" data-user="mohhasbias"><code> </code></pre>
+
+
+<script async src="http://codepen.io:/assets/embed/ei.js"></script>
+
+
+<h2>Absolute Centering</h2>
+
+<p>absolute centering dapat diperoleh dengan mengkombinasikan horizontal centering dan vertical centering seperti berikut ini.</p>
+
+<pre class="codepen" data-height="300" data-type="result" data-href="hCkub" data-user="mohhasbias"><code> </code></pre>
+
+
+<script async src="http://codepen.io:/assets/embed/ei.js"></script>
+
+
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -382,7 +470,7 @@ untuk membetulkannya, back to html</p>
 </span><span class='line'>
 </span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Device ID: &quot;</span> <span class="nv">$id</span>
 </span><span class='line'>
-</span><span class='line'><span class="nv">prop</span><span class="o">=</span><span class="sb">`</span>xinput list-props 12 | grep -m 1 -i <span class="s2">&quot;scrolling distance&quot;</span> | grep -o -e <span class="s1">&#39;[[:digit:]]\+&#39;</span><span class="sb">`</span>
+</span><span class='line'><span class="nv">prop</span><span class="o">=</span><span class="sb">`</span>xinput list-props <span class="nv">$id</span> | grep -m 1 -i <span class="s2">&quot;scrolling distance&quot;</span> | grep -o -e <span class="s1">&#39;[[:digit:]]\+&#39;</span><span class="sb">`</span>
 </span><span class='line'>
 </span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Current Properti: &quot;</span> <span class="nv">$prop</span>
 </span><span class='line'>
@@ -676,55 +764,6 @@ untuk membetulkannya, back to html</p>
 <li>Pada repo di Github, aktifkan service hooks untuk deployHQ dengan meng-paste github hook sebelumnya</li>
 <li>Enjoy</li>
 </ol>
-
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-18T21:33:00+07:00" data-updated="true" itemprop="datePublished">May 18<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/css/'>CSS</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/05/18/membuat-kapitalisasi-otomatis-menggunakan-css/" itemprop="url">Membuat Kapitalisasi Otomatis Menggunakan CSS</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>pada CSS terdapat properti untuk membuat text otomatis menjadi Title Case, yaitu membuat awal huruf pada setiap kata menjadi huruf besar.
-akan tetapi, properti tersebut tidak mengubah huruf lain menjadi kecil. Karenanya, perlu dikombinasi dengan perintah lain.</p>
-
-<p>Sebagai contoh, jika menggunakan PHP, maka sebelum sebuah string ditampilkan, harus dikecilkan dulu menggunakan <code>strtolower</code>. kemudian pada CSS-nya, kita aktifkan properti <code>text-transform</code>, seperti berikut ini</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">p</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">text-transform</span><span class="o">:</span> <span class="k">capitalize</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
 
 
 		
